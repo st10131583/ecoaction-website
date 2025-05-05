@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAction - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #05a861;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #05a861;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #05a861;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p>Get in touch with EcoAction to learn more about our programs, volunteer opportunities, or how you can support our mission.</p>
+            <p><strong>Address:</strong> 123 Green Street, EcoCity, EC 12345</p>
+            <p><strong>Phone:</strong> +27 69 101 0013</p>
+            <p><strong>Email:</strong> info@ecoaction.org</p>
+            <p><strong>Follow Us:</strong> <a href="https://www.facebook.com/ecoaction">Facebook</a>, <a href="https://twitter.com/ecoaction">Twitter</a>, <a href="https://www.instagram.com/ecoaction">Instagram</a></p>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Contact Form</h2>
+            <form id="contactForm" action="mailto:example@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us: info@ecoaction.org | Phone: +27 69 101 0013</p>
+        <small>&copy; 2024 EcoAction. All rights reserved.</small>
+    </footer>
+
+    <script>
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        // Clear initial value when user clicks on the input field
+        nameInput.addEventListener('focus', clearInitialValue);
+        emailInput.addEventListener('focus', clearInitialValue);
+        messageInput.addEventListener('focus', clearInitialValue);
+
+        function clearInitialValue(event) {
+            event.target.value = '';
+        }
+
+        // Basic form validation
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                alert('Please fill out all required fields.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
