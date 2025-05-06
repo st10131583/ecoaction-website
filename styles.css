@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -7,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #004d40;
+    background-color: #05a861;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -28,26 +27,19 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
     padding: 20px;
 }
 
-.content-container {
-    background-color: #333;
+section {
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
     margin-bottom: 20px;
-}
-
-.content-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #333;
-    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -57,82 +49,73 @@ footer {
     text-align: center;
 }
 
-/* Specific Element Styles */
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
 h2 {
+    color: #05a861;
+    border-bottom: 2px solid #05a861;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 24px;
-    margin-bottom: 15px;
 }
 
-p {
-    font-size: 16px;
+.mission-text {
+    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 15px;
+    text-align: justify;
 }
 
-a {
-    color: #007bff;
+.featured-programs {
+    margin: 0;
+    padding: 0;
+}
+
+.featured-programs li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.blog-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-posts li {
+    margin-bottom: 10px;
+}
+
+.blog-posts a {
+    color: #05a861;
     text-decoration: none;
 }
 
-/* Example of Styling Classes */
-.featured {
-    background-color: #ffffcc;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+/* Image Slider Styling */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 600px; /* You can adjust this to your preferred size */
+    margin: auto;
 }
 
-/* Example of Styling IDs */
-#about-info {
-    font-style: italic;
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-/* Additional Styles */
-/* Consistent spacing */
-.section-title {
-    margin-bottom: 30px;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
-/* Responsive design */
-@media screen and (max-width: 960px) {
-    body {
-        font-size: 14px; /* Decrease the font size for better readability on smaller screens */
-    }
-
-    header {
-        padding: 10px; /* Reduce padding in the header */
-    }
-
-    nav ul li {
-        margin-right: 5px; /* Decrease margin between navigation items */
-    }
-
-    /* Adjust other styles as needed */
+.slide img {
+    width: 100%;
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* This ensures the image covers the container without distortion */
+    display: block;
 }
 
-/* Media query for screens smaller than 960px */
-@media screen and (max-width: 960px) {
-    body {
-        font-size: 14px; /* Decrease the font size for better readability on smaller screens */
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 100%;
     }
-
-    header {
-        padding: 10px; /* Reduce padding in the header */
-    }
-
-    nav ul li {
-        margin-right: 5px; /* Decrease margin between navigation items */
-    }
-
-    /* Adjust other styles as needed */
-}
-
-/* Accessibility */
-a:focus {
-    outline: 2px solid #007bff;
 }
